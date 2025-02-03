@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    background: white;
+ background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -41,12 +41,23 @@ h1, h2, h3 {
     margin: 10px 0;
 }
 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .product-item {
     border: 1px solid #dee2e6;
     border-radius: 5px;
     padding: 15px;
-    margin: 10px 0;
     background-color: #f8f9fa;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .product-item h3 {
@@ -55,12 +66,6 @@ h1, h2, h3 {
 
 .product-item p {
     margin: 5px 0;
-}
-
-.product-item img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
 }
 
 .product-link {
