@@ -132,3 +132,42 @@ footer {
     max-width: 100px;
     height: auto;
 }
+
+/* Sosial Media */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h2 {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+    padding: 8px 12px; /* Tambahkan padding untuk membuat tautan lebih besar */
+    border: 1px solid #007bff; /* Tambahkan border */
+    border-radius: 5px; /* Tambahkan border-radius untuk sudut yang lebih halus */
+    transition: background-color 0.3s, color 0.3s; /* Transisi untuk efek hover */
+}
+
+.social-media a:hover {
+    background-color: #007bff; /* Ubah latar belakang saat hover */
+    color: white; /* Ubah warna teks saat hover */
+}
+
+/* Responsivitas untuk sosial media */
+@media (max-width: 600px) {
+    .social-media {
+        display: flex;
+        flex-direction: column; /* Tampilkan tautan dalam kolom pada layar kecil */
+        align-items: center; /* Pusatkan tautan */
+    }
+
+    .social-media a {
+        margin: 5px 0; /* Jarak vertikal antar tautan */
+        width: 100%; /* Buat tautan lebar penuh */
+        text-align: center; /* Pusatkan teks dalam tautan */
+    }
+}
