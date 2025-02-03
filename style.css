@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e9ecef;
+    background-color: #e 9ecef;
     margin: 0;
     padding: 20px;
 }
@@ -8,10 +8,11 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
- background: white;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Memusatkan konten */
 }
 
 h1, h2, h3 {
@@ -29,7 +30,7 @@ h1, h2, h3 {
 }
 
 .info {
-    text-align: left;
+    text-align: center; /* Memusatkan informasi */
     margin-top: 20px;
 }
 
@@ -39,6 +40,11 @@ h1, h2, h3 {
 
 .info p {
     margin: 10px 0;
+}
+
+.divider {
+    border: 1px solid #dee2e6; /* Garis pemisah */
+    margin: 20px 0; /* Jarak atas dan bawah */
 }
 
 .product-grid {
