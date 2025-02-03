@@ -92,6 +92,22 @@ h1, h2, h3 {
     background-color: #0056b3;
     transform: scale(1.05); /* Efek zoom saat hover */
 }
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none; /* Sembunyikan tombol secara default */
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
 
 /* Gaya untuk footer */
 footer {
