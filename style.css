@@ -56,7 +56,7 @@ input {
 
 button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #007b ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -80,5 +80,45 @@ button:hover {
 
 .product-item img {
     width: 100%;
+    height: auto;
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk logo sponsor */
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sponsor-logos a {
+    margin: 0 10px;
+}
+
+.sponsor-logos img {
+    max-width: 100px;
     height: auto;
 }
