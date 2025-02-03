@@ -13,6 +13,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center; /* Memusatkan konten */
+    border: 1px solid #dee2e6; /* Border untuk container */
 }
 
 h1, h2, h3 {
@@ -33,7 +34,10 @@ h1, h2, h3 {
 
 .info {
     text-align: center; /* Memusatkan informasi */
-    margin-top: 20px;
+    border: 1px solid #dee2e6; /* Border untuk info */
+    padding: 15px; /* Tambahkan padding untuk ruang di dalam border */
+    border-radius: 5px; /* Sudut yang lebih halus */
+    margin-bottom: 20px; /* Jarak bawah */
 }
 
 .info h3 {
@@ -53,6 +57,9 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    border: 1px solid #dee2e6; /* Border untuk product-grid */
+    padding: 15px; /* Tambahkan padding untuk ruang di dalam border */
+    border-radius: 5px; /* Sudut yang lebih halus */
 }
 
 .product-item {
@@ -116,10 +123,12 @@ footer {
     background-color: #343a40;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+    border-top: 1px solid #dee2e6; /* Border atas untuk footer */
+    border-radius: 5px; /* Sudut yang lebih halus */
 }
 
 .footer-content p {
