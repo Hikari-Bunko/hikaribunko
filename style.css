@@ -41,46 +41,35 @@ h1, h2, h3 {
     margin: 10px 0;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-input {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px;
-    background-color: #007b ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#productList {
-    margin-top: 20px;
-}
-
 .product-item {
-    border: 1px solid #ced4da;
+    border: 1px solid #dee2e6;
     border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f8f9fa;
+}
+
+.product-item h3 {
+    margin: 0 0 10px;
+}
+
+.product-item p {
+    margin: 5px 0;
 }
 
 .product-item img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    margin: 10px 0;
+}
+
+.product-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    text-decoration: underline;
 }
 
 /* Gaya untuk footer */
