@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e 9ecef;
+    background-color: #333;
     margin: 0;
     padding: 20px;
 }
@@ -185,5 +185,19 @@ footer {
         margin: 5px 0; /* Jarak vertikal antar tautan */
         width: 100%; /* Buat tautan lebar penuh */
         text-align: center; /* Pusatkan teks dalam tautan */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+
+    .profile-pic {
+        width: 100px; /* Ukuran lebih kecil untuk gambar profil di perangkat kecil */
     }
 }
