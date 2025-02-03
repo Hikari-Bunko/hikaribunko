@@ -24,9 +24,11 @@ h1, h2, h3 {
 }
 
 .profile-pic {
-    border-radius: 50%;
-    border: 3px solid #007bff;
-    margin-bottom: 15px;
+    width: 200px; /* Atur lebar gambar profil */
+    height: 200px; /* Atur tinggi gambar profil */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 3px solid #007bff; /* Border untuk gambar */
+    margin-bottom: 15px; /* Jarak bawah */
 }
 
 .info {
