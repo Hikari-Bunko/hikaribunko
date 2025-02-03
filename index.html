@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Profil dan Posting Produk</title>
+    <title>Halaman Profil dan Produk</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -23,16 +23,27 @@
             <p><i class="fas fa-phone"></i> Telepon: 123-456-7890</p>
         </div>
 
-        <h2>Posting Produk</h2>
-        <form id="productForm">
-            <input type="text" id="productName" placeholder="Nama Produk" required>
-            <input type="text" id="productDescription" placeholder="Deskripsi Produk" required>
-            <input type="url" id="productImage" placeholder="URL Gambar Produk" required>
-            <input type="url" id="productLink" placeholder="URL Produk" required>
-            <button type="submit">Kirim</button>
-        </form>
-        
-        <div id="productList"></div>
+        <h2>Produk yang Ditawarkan</h2>
+        <div id="productList">
+            <div class="product-item">
+                <h3>Produk 1</h3>
+                <p>Deskripsi: Ini adalah deskripsi produk 1. Produk ini sangat bermanfaat dan berkualitas tinggi.</p>
+                <img src="https://via.placeholder.com/300x150?text=Produk+1" alt="Produk 1">
+                <p><a href="https://example.com/produk1" target="_blank" class="product-link">Lihat Produk</a></p>
+            </div>
+            <div class="product-item">
+                <h3>Produk 2</h3>
+                <p>Deskripsi: Ini adalah deskripsi produk 2. Produk ini sangat bermanfaat dan berkualitas tinggi.</p>
+                <img src="https://via.placeholder.com/300x150?text=Produk+2" alt="Produk 2">
+                <p><a href="https://example.com/produk2" target="_blank" class="product-link">Lihat Produk</a></p>
+            </div>
+            <div class="product-item">
+                <h3>Produk 3</h3>
+                <p>Deskripsi: Ini adalah deskripsi produk 3. Produk ini sangat bermanfaat dan berkualitas tinggi.</p>
+                <img src="https://via.placeholder.com/300x150?text=Produk+3" alt="Produk 3">
+                <p><a href="https://example.com/produk3" target="_blank" class="product-link">Lihat Produk</a></p>
+            </div>
+        </div>
     </div>
 
     <footer>
