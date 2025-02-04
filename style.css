@@ -15,6 +15,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 1px solid #dee2e6;
+    width: 90%; /* Mengatur lebar menjadi 90% untuk perangkat kecil */
 }
 
 h1, h2, h3 {
@@ -43,6 +44,17 @@ h1, h2, h3 {
 
 .search-bar button:hover {
     background-color: #0056b3;
+}
+
+.sort-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sort-bar select {
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
 }
 
 .profile {
@@ -81,7 +93,7 @@ h1, h2, h3 {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mengatur ukuran minimum kolom */
     gap: 20px;
     border: 1px solid #dee2e6;
     padding: 15px;
@@ -147,6 +159,27 @@ h1, h2, h3 {
     background-color: #0056b3;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
 footer {
     background-color: SlateGray;
     color: white;
@@ -190,7 +223,7 @@ footer {
 .social-media {
     margin-top: 20px;
     border: 1px solid #dee2e6;
-    padding: 15px;
+    padding:  15px;
     border-radius: 5px;
 }
 
@@ -214,27 +247,37 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .social-media {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .search-bar {
+        flex-direction: column; /* Mengatur input dan tombol dalam kolom */
+    }
+
+    .search-bar input {
+        width: 100%; /* Mengatur lebar input menjadi 100% */
+        margin-bottom: 10px; /* Menambahkan margin bawah */
+    }
+
+    .search-bar button {
+        width: 100%; /* Mengatur lebar tombol menjadi 100% */
+    }
+
+    .sort-bar {
+        margin: 20px 0;
+    }
+
+    .sort-bar select {
+        width: 100%; /* Mengatur lebar dropdown menjadi 100% */
     }
 
     .social-media a {
-        margin: 5px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .container {
-        padding: 10px;
+        width: 100%; /* Mengatur lebar tautan sosial media menjadi 100% */
+        text-align: center; /* Mengatur teks menjadi tengah */
     }
 
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Mengatur tampilan grid menjadi satu kolom */
     }
 
     .profile-pic {
-        width: 100px;
+        width: 100px; /* Mengatur ukuran gambar profil untuk perangkat kecil */
     }
 }
