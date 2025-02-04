@@ -56,6 +56,7 @@ function displayProducts() {
     }
 }
 
+// Fungsi pencarian
 function searchFunction() {
     const input = document.getElementById('searchInput');
     const filter = input.value.toLowerCase();
