@@ -15,14 +15,22 @@ document.getElementById('backToTop').onclick = function() {
 
 let currentPage = 1;
 const itemsPerPage = 2; // Jumlah produk per halaman
+let allProducts = []; // Array untuk menyimpan semua produk
 let filteredProducts = []; // Array untuk menyimpan produk yang difilter
 
-function displayProducts() {
+// Menyimpan semua produk ke dalam array
+function initializeProducts() {
     const productItems = document.querySelectorAll('.product-item');
+    allProducts = Array.from(productItems);
+    filteredProducts = allProducts; // Awalnya, semua produk ditampilkan
+}
+
+// Menampilkan produk yang difilter
+function displayProducts() {
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
     
     // Sembunyikan semua produk
-    productItems.forEach(item => item.style.display = 'none');
+    allProducts.forEach(item => item.style.display = 'none');
 
     // Hitung indeks awal dan akhir untuk produk yang akan ditampilkan
     const start = (currentPage - 1) * itemsPerPage;
@@ -30,8 +38,7 @@ function displayProducts() {
 
     // Tampilkan produk untuk halaman saat ini
     for (let i = start; i < end && i < filteredProducts.length; i++) {
-        const productIndex = Array.from(productItems).indexOf(filteredProducts[i]);
-        productItems[productIndex].style.display = 'block';
+        filteredProducts[i].style.display = 'block';
     }
 
     // Tampilkan pagination
@@ -52,9 +59,9 @@ function displayProducts() {
 function searchFunction() {
     const input = document.getElementById('searchInput');
     const filter = input.value.toLowerCase();
-    const productItems = document.querySelectorAll('.product-item');
 
-    filteredProducts = Array.from(productItems).filter(item => {
+    // Filter produk berdasarkan input pencarian
+    filteredProducts = allProducts.filter(item => {
         const title = item.querySelector('h3').textContent.toLowerCase();
         return title.includes(filter); // Menyimpan produk yang sesuai dengan filter
     });
@@ -64,5 +71,6 @@ function searchFunction() {
     displayProducts();
 }
 
-// Panggil fungsi untuk menampilkan produk saat halaman dimuat
+// Panggil fungsi untuk menginisialisasi produk saat halaman dimuat
+initializeProducts();
 displayProducts();
