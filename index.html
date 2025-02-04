@@ -17,20 +17,7 @@
         <h1>Hikari Bunko</h1>
     </header>
     <main class="container">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Cari produk atau artikel..." onkeyup="searchFunction()">
-            <button type="button" onclick="searchFunction()">Cari</button>
-        </div>
 
-        <div class="sort-bar">
-            <label for="sortSelect">Urutkan berdasarkan:</label>
-            <select id="sortSelect" onchange="sortProducts()">
-                <option value="default">Pilih...</option>
-                <option value="name">Nama (A-Z)</option>
-                <option value="name-desc">Nama (Z-A)</option>
-            </select>
-        </div>
-        
         <div class="profile">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQ6OzhsMP4QU_QSxySIhh_FsxZa-SZSxiwWUvM5weRLm-RWzU7jw8azJjEmu4acqVTh9q5REGxioV4vc7vuK0jWYGi3cvWZhAFGHnMWZt89PlbSLTR6y_hrAkoy1IqFsFVR1-tdKClwtlb_JooACIE1EwVioNRP3SC6j5zC7lqIo6ccsXnUmijFl-EUPo/s1600/hb200x200.png" alt="Foto Profil" class="profile-pic">
             <h2>Membawa Cahaya Cerita dari Negeri Jauh</h2>
@@ -47,6 +34,19 @@
         <hr class="divider">
 
         <h2>Produk yang Ditawarkan</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Cari produk atau artikel..." onkeyup="searchFunction()">
+            <button type="button" onclick="searchFunction()">Cari</button>
+        </div>
+
+        <div class="sort-bar">
+            <label for="sortSelect">Urutkan berdasarkan:</label>
+            <select id="sortSelect" onchange="sortProducts()">
+                <option value="default">Pilih...</option>
+                <option value="name">Nama (A-Z)</option>
+                <option value="name-desc">Nama (Z-A)</option>
+            </select>
+        </div>
         <div class="product-grid">
             <div class="product-item">
                 <img src="https://via.placeholder.com/300x150?text=Produk+1" alt="Produk 1">
