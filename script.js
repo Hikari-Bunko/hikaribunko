@@ -14,7 +14,7 @@ document.getElementById('backToTop').onclick = function() {
 };
 
 let currentPage = 1;
-const itemsPerPage = 2; // Jumlah produk per halaman
+const itemsPerPage = 3; // Jumlah produk per halaman
 
 function displayProducts() {
     const productItems = document.querySelectorAll('.product-item');
@@ -48,14 +48,19 @@ function displayProducts() {
 }
 
 function searchFunction() {
-    const input = document.getElementById('searchInput');
-    const filter = input.value.toLowerCase();
-    const productItems = document.querySelectorAll('.product-item');
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const productItems = document.querySelectorAll('.product-item');
 
-    productItems.forEach(item => {
-        const title = item.querySelector('h3').textContent.toLowerCase();
-        item.style.display = title.includes(filter) ? "" : "none"; // Tampilkan atau sembunyikan item
-    });
+            productItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(filter)) {
+                    item.style.display = ""; // Tampilkan item
+                } else {
+                    item.style.display = "none"; // Sembunyikan item
+                }
+            });
+        }
 
     // Reset pagination setelah pencarian
     currentPage = 1;
