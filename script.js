@@ -14,22 +14,24 @@ document.getElementById('backToTop').onclick = function() {
 };
 
 let currentPage = 1;
-const itemsPerPage = 3; // Jumlah produk per halaman
+const itemsPerPage = 2; // Jumlah produk per halaman
+let filteredProducts = []; // Array untuk menyimpan produk yang difilter
 
 function displayProducts() {
     const productItems = document.querySelectorAll('.product-item');
-    const totalPages = Math.ceil(productItems.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
     
     // Sembunyikan semua produk
- productItems.forEach(item => item.style.display = 'none');
+    productItems.forEach(item => item.style.display = 'none');
 
     // Hitung indeks awal dan akhir untuk produk yang akan ditampilkan
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
 
     // Tampilkan produk untuk halaman saat ini
-    for (let i = start; i < end && i < productItems.length; i++) {
-        productItems[i].style.display = 'block';
+    for (let i = start; i < end && i < filteredProducts.length; i++) {
+        const productIndex = Array.from(productItems).indexOf(filteredProducts[i]);
+        productItems[productIndex].style.display = 'block';
     }
 
     // Tampilkan pagination
@@ -48,19 +50,14 @@ function displayProducts() {
 }
 
 function searchFunction() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const productItems = document.querySelectorAll('.product-item');
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const productItems = document.querySelectorAll('.product-item');
 
-            productItems.forEach(item => {
-                const title = item.querySelector('h3').textContent.toLowerCase();
-                if (title.includes(filter)) {
-                    item.style.display = ""; // Tampilkan item
-                } else {
-                    item.style.display = "none"; // Sembunyikan item
-                }
-            });
-        }
+    filteredProducts = Array.from(productItems).filter(item => {
+        const title = item.querySelector('h3').textContent.toLowerCase();
+        return title.includes(filter); // Menyimpan produk yang sesuai dengan filter
+    });
 
     // Reset pagination setelah pencarian
     currentPage = 1;
