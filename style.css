@@ -3,6 +3,7 @@ body {
     background-color: #333;
     margin: 0;
     padding: 20px;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 .container {
@@ -12,12 +13,36 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Memusatkan konten */
-    border: 1px solid #dee2e6; /* Border untuk container */
+    text-align: center;
+    border: 1px solid #dee2e6;
 }
 
 h1, h2, h3 {
     color: #343a40;
+}
+
+.search-bar {
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
 }
 
 .profile {
@@ -25,19 +50,19 @@ h1, h2, h3 {
 }
 
 .profile-pic {
-    width: 200px; /* Atur lebar gambar profil */
-    height: 200px; /* Atur tinggi gambar profil */
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
-    border: 3px solid #007bff; /* Border untuk gambar */
-    margin-bottom: 15px; /* Jarak bawah */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin-bottom: 15px;
 }
 
 .info {
-    text-align: center; /* Memusatkan informasi */
-    border: 1px solid #dee2e6; /* Border untuk info */
-    padding: 15px; /* Tambahkan padding untuk ruang di dalam border */
-    border-radius: 5px; /* Sudut yang lebih halus */
-    margin-bottom: 20px; /* Jarak bawah */
+    text-align: center;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
     background-color: LightSeaGreen;
 }
 
@@ -50,17 +75,17 @@ h1, h2, h3 {
 }
 
 .divider {
-    border: 1px solid #dee2e6; /* Garis pemisah */
-    margin: 20px 0; /* Jarak atas dan bawah */
+    border: 1px solid #dee2e6;
+    margin: 20px 0;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    border: 1px solid #dee2e6; /* Border untuk product-grid */
-    padding: 15px; /* Tambahkan padding untuk ruang di dalam border */
-    border-radius: 5px; /* Sudut yang lebih halus */
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
     background-color: DeepSkyBlue;
 }
 
@@ -95,14 +120,16 @@ h1, h2, h3 {
     text-decoration: underline;
     color: #0056b3;
 }
+
 .btn {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background-color: #0056b3;
-    transform: scale(1.05); /* Efek zoom saat hover */
+    transform: scale(1.05);
 }
+
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -112,7 +139,7 @@ h1, h2, h3 {
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
-    display: none; /* Sembunyikan tombol secara default */
+    display: none;
     transition: background-color 0.3s;
 }
 
@@ -120,7 +147,6 @@ h1, h2, h3 {
     background-color: #0056b3;
 }
 
-/* Gaya untuk footer */
 footer {
     background-color: SlateGray;
     color: white;
@@ -129,8 +155,8 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #dee2e6; /* Border atas untuk footer */
-    border-radius: 5px; /* Sudut yang lebih halus */
+    border-top: 1px solid #dee2e6;
+    border-radius: 5px;
 }
 
 .footer-content p {
@@ -146,7 +172,6 @@ footer {
     text-decoration: underline;
 }
 
-/* Gaya untuk logo sponsor */
 .sponsor-logos {
     display: flex;
     justify-content: center;
@@ -162,12 +187,11 @@ footer {
     height: auto;
 }
 
-/* Sosial Media */
 .social-media {
     margin-top: 20px;
-    border: 1px solid #dee2e6; /* Border untuk sosial-media */
-    padding: 15px; /* Tambahkan padding untuk ruang di dalam border */
-    border-radius: 5px; /* Sudut yang lebih halus */
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .social-media h2 {
@@ -178,42 +202,39 @@ footer {
     margin: 0 10px;
     color: #007bff;
     text-decoration: none;
-    padding: 8px 12px; /* Tambahkan padding untuk membuat tautan lebih besar */
-    border: 1px solid #007bff; /* Tambahkan border */
-    border-radius: 5px; /* Tambahkan border-radius untuk sudut yang lebih halus */
-    transition: background-color 0.3s, color 0.3s; /* Transisi untuk efek hover */
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .social-media a:hover {
-    background-color: #007bff; /* Ubah latar belakang saat hover */
-    color: white; /* Ubah warna teks saat hover */
+    background-color: #007bff;
+    color: white;
 }
 
-/* Responsivitas untuk sosial media */
 @media (max-width: 600px) {
     .social-media {
         display: flex;
-        flex-direction: column; /* Tampilkan tautan dalam kolom pada layar kecil */
-        align-items: center; /* Pusatkan tautan */
+        flex-direction: column;
+        align-items: center;
     }
 
     .social-media a {
-        margin: 5px 0; /* Jarak vertikal antar tautan */
-        width: 100%; /* Buat tautan lebar penuh */
-        text-align: center; /* Pusatkan teks dalam tautan */
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
     }
-}
 
-@media (max-width: 600px) {
     .container {
         padding: 10px;
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+        grid-template-columns: 1fr;
     }
 
     .profile-pic {
-        width: 100px; /* Ukuran lebih kecil untuk gambar profil di perangkat kecil */
+        width: 100px;
     }
 }
